@@ -4,9 +4,9 @@
         <id>9</id>
         <Name>remconnjoin</Name>
         <Schema>Scada_realtime</Schema>
-        <Query>Select cno as "Connection"
-        , rno as "Remote"
-        , name as "Name" from ADMS_QueryEngine.SCADA.remconnjoin</Query>
+        <Query>Select Name,
+        Connection
+        , Remote  from ADMS_QueryEngine.SCADA.remconnjoin</Query>
     </table>
     <table>
         <id>8</id>

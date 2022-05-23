@@ -106,19 +106,23 @@ def GetElementID(path = '',Error_Mess = ''):
         print(ValueError)
 
 # %%
-conn_prod = pyodbc.connect('Driver={SQL Server}; Server=10.241.109.41,20010\\OASYSHDB;Database=EPSA_Reporting;UID=epsareportes; PWD=Epsa.2020!;')
-conn_dev = pyodbc.connect('Driver={SQL Server}; Server=10.241.114.12,20010\\OASYSHDB;Database=ADMS_QueryEngine;UID=Epsareportes; PWD=cmXoasys2;')
+def main():
+    conn_prod = pyodbc.connect('Driver={SQL Server}; Server=10.241.109.41,20010\\OASYSHDB;Database=EPSA_Reporting;UID=epsareportes; PWD=Epsa.2020!;')
+    conn_dev = pyodbc.connect('Driver={SQL Server}; Server=10.241.114.12,20010\\OASYSHDB;Database=ADMS_QueryEngine;UID=Epsareportes; PWD=cmXoasys2;')
 
-message = """"
-Por favor ingresa el numero de la Tabla deseas comparar entre Dev y Production:
+    message = """"
+    Por favor ingresa el numero de la Tabla deseas comparar entre Dev y Production:
 
-1. status
-2. analog
-3. rate
-4. multistate
-5. connection
-6. remote
-7. station
-"""
+    1. status
+    2. analog
+    3. rate
+    4. multistate
+    5. connection
+    6. remote
+    7. station
+    """
+
+    GetDifferencesRTDB(conn_prod,conn_dev,input(message))
 # %%
-GetDifferencesRTDB(conn_prod,conn_dev,input(message))
+if __name__ == '__main__':
+    main()
