@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<tables>
+    <table>
+        <id>9</id>
+        <Name>remconnjoin</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select cno as "Connection"
+        , rno as "Remote"
+        , name as "Name" from ADMS_QueryEngine.SCADA.remconnjoin</Query>
+    </table>
+    <table>
+        <id>8</id>
+        <Name>aceconfig</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>select [name] as "Name"
+        ,[codeSlot] as "Code"
+        ,[description] as "Description"
+        ,[dataset] as "Dataset"
+        ,[parameters[0]].paramPath] as "Output[0]"
+        ,[parameters[1]].paramPath] as "Path[1]"
+        ,[parameters[2]].paramPath] as "Path[2]"
+        ,[parameters[3]].paramPath] as "Path[3]"
+        ,[parameters[4]].paramPath] as "Path[4]"
+        ,[parameters[5]].paramPath] as "Path[5]"
+        ,[parameters[6]].paramPath] as "Path[6]"
+        ,[parameters[7]].paramPath] as "Path[7]"
+        ,[parameters[8]].paramPath] as "Path[8]"
+        ,[parameters[9]].paramPath] as "Path[9]"
+        ,[parameters[10]].paramPath] as "Path[10]"
+        ,[parameters[11]].paramPath] as "Path[11]"
+        ,[parameters[12]].paramPath] as "Path[12]"
+        ,[parameters[1]].isConstant] as "ConstOrPath[1]"
+        ,[parameters[2]].isConstant] as "ConstOrPath[2]"
+        ,[parameters[3]].isConstant] as "ConstOrPath[3]"
+        ,[parameters[4]].isConstant] as "ConstOrPath[4]"
+        ,[parameters[5]].isConstant] as "ConstOrPath[5]"
+        ,[parameters[6]].isConstant] as "ConstOrPath[6]"
+        ,[parameters[7]].isConstant] as "ConstOrPath[7]"
+        ,[parameters[8]].isConstant] as "ConstOrPath[8]"
+        ,[parameters[9]].isConstant] as "ConstOrPath[9]"
+        ,[parameters[10]].isConstant] as "ConstOrPath[10]"
+        ,[parameters[11]].isConstant] as "ConstOrPath[11]"
+        ,[parameters[12]].isConstant] as "ConstOrPath[12]"
+        ,[parameters[1]].value] as "Constant Value[1]"
+        ,[parameters[2]].value] as "Constant Value[2]"
+        ,[parameters[3]].value] as "Constant Value[3]"
+        ,[parameters[4]].value] as "Constant Value[4]"
+        ,[parameters[5]].value] as "Constant Value[5]"
+        ,[parameters[6]].value] as "Constant Value[6]"
+        ,[parameters[7]].value] as "Constant Value[7]"
+        ,[parameters[8]].value] as "Constant Value[8]"
+        ,[parameters[9]].value] as "Constant Value[9]"
+        ,[parameters[10]].value] as "Constant Value[10]"
+        ,[parameters[11]].value] as "Constant Value[11]"
+        ,[parameters[12]].value] as "Constant Value[12]" 
+        ,[DQmapping[0]].InputDQname] as "Input Data Quality Name[0]"
+        ,[DQmapping[0]].OutputDQname] as "Output Data Quality Name[0]"
+        ,[DQmapping[1]].InputDQname] as "Input Data Quality Name[1]"
+        ,[DQmapping[1]].OutputDQname] as "Output Data Quality Name[1]"
+        ,[DQmapping[2]].InputDQname] as "Input Data Quality Name[2]"
+        ,[DQmapping[2]].OutputDQname] as "Output Data Quality Name[2]"
+        ,[DQmapping[3]].InputDQname] as "Input Data Quality Name[3]"
+        ,[DQmapping[3]].OutputDQname] as "Output Data Quality Name[3]"
+        ,[DQmapping[4]].InputDQname] as "Input Data Quality Name[4]"
+        ,[DQmapping[4]].OutputDQname] as "Output Data Quality Name[4]"
+        ,[DQmapping[5]].InputDQname] as "Input Data Quality Name[5]"
+        ,[DQmapping[5]].OutputDQname] as "Output Data Quality Name[5]"
+        ,[DQmapping[6]].InputDQname] as "Input Data Quality Name[6]"
+        ,[DQmapping[6]].OutputDQname] as "Output Data Quality Name[6]"
+        ,[DQmapping[7]].InputDQname] as "Input Data Quality Name[7]"
+        ,[DQmapping[7]].OutputDQname] as "Output Data Quality Name[7]"
+        ,[DQmapping[8]].InputDQname] as "Input Data Quality Name[8]"
+        ,[DQmapping[8]].OutputDQname] as "Output Data Quality Name[8]"
+        ,[DQmapping[9]].InputDQname] as "Input Data Quality Name[9]"
+        ,[DQmapping[9]].OutputDQname] as "Output Data Quality Name[9]"
+        ,[DQmapping[10]].InputDQname] as "Input Data Quality Name[10]"
+        ,[DQmapping[10]].OutputDQname] as "Output Data Quality Name[10]"
+        ,[DQmapping[11]].InputDQname] as "Input Data Quality Name[11]"
+        ,[DQmapping[11]].OutputDQname] as "Output Data Quality Name[11]"
+        ,[DQmapping[12]].InputDQname] as "Input Data Quality Name[12]"
+        ,[DQmapping[12]].OutputDQname] as "Output Data Quality Name[12]"
+        ,[DQmapping[13]].InputDQname] as "Input Data Quality Name[13]"
+        ,[DQmapping[13]].OutputDQname] as "Output Data Quality Name[13]"
+        ,[DQmapping[14]].InputDQname] as "Input Data Quality Name[14]"
+        ,[DQmapping[14]].OutputDQname] as "Output Data Quality Name[14]"
+        ,[DQmapping[15]].InputDQname] as "Input Data Quality Name[15]"
+        ,[DQmapping[15]].OutputDQname] as "Output Data Quality Name[15]"
+        ,[DQmapping[16]].InputDQname] as "Input Data Quality Name[16]"
+        ,[DQmapping[16]].OutputDQname] as "Output Data Quality Name[16]"
+        ,[DQmapping[17]].InputDQname] as "Input Data Quality Name[17]"
+        ,[DQmapping[17]].OutputDQname] as "Output Data Quality Name[17]"
+        ,[DQmapping[18]].InputDQname] as "Input Data Quality Name[18]"
+        ,[DQmapping[18]].OutputDQname] as "Output Data Quality Name[18]"
+        ,[DQmapping[19]].InputDQname] as "Input Data Quality Name[19]"
+        ,[DQmapping[19]].OutputDQname] as "Output Data Quality Name[19]"
+        ,[DQmapping[20]].InputDQname] as "Input Data Quality Name[20]"
+        ,[DQmapping[20]].OutputDQname] as "Output Data Quality Name[20]"
+        ,[DQmapping[21]].InputDQname] as "Input Data Quality Name[21]"
+        ,[DQmapping[21]].OutputDQname] as "Output Data Quality Name[21]"
+        ,[DQmapping[22]].InputDQname] as "Input Data Quality Name[22]"
+        ,[DQmapping[22]].OutputDQname] as "Output Data Quality Name[22]"
+        ,[DQmapping[23]].InputDQname] as "Input Data Quality Name[23]"
+        ,[DQmapping[23]].OutputDQname] as "Output Data Quality Name[23]"
+        ,[DQmapping[24]].InputDQname] as "Input Data Quality Name[24]"
+        ,[DQmapping[24]].OutputDQname] as "Output Data Quality Name[24]"
+        ,[DQmapping[25]].InputDQname] as "Input Data Quality Name[25]"
+        ,[DQmapping[25]].OutputDQname] as "Output Data Quality Name[25]"
+        ,[DQmapping[26]].InputDQname] as "Input Data Quality Name[26]"
+        ,[DQmapping[26]].OutputDQname] as "Output Data Quality Name[26]"
+        ,[DQmapping[27]].InputDQname] as "Input Data Quality Name[27]"
+        ,[DQmapping[27]].OutputDQname] as "Output Data Quality Name[27]"
+        ,[DQmapping[28]].InputDQname] as "Input Data Quality Name[28]"
+        ,[DQmapping[28]].OutputDQname] as "Output Data Quality Name[28]"
+        ,[DQmapping[29]].InputDQname] as "Input Data Quality Name[29]"
+        ,[DQmapping[29]].OutputDQname] as "Output Data Quality Name[29]" from ADMS_QueryEngine.SCADA.aceconfig</Query>
+    </table>
+    <table>
+        <id>7</id>
+        <Name>station</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select name as Name, description as Description, dataset as "Dataset" from ADMS_QueryEngine.SCADA.station</Query>
+    </table>
+    <table>
+        <id>6</id>
+        <Name>remote</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select name as Name
+                ,description as Description
+                ,adrs as Address
+                ,[dataset] as "Dataset"
+                ,[flag.bmsg] as "Message"
+                ,[allowalminhOverride] as "Allow off-Norm Alm Override"
+                ,[allowclrinhOverride] as "Allow Norm Alm Override"
+                ,proto as Protocol from ADMS_QueryEngine.SCADA.remote</Query>
+    </table>
+    <table>
+        <id>5</id>
+        <Name>connection</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select name as Name 
+               ,description as Description
+               ,[dataset] as "Dataset"
+               ,commproc as Omnicomm 
+               ,proto as Protocol 
+               ,device as "Server Name" from ADMS_QueryEngine.SCADA.connection</Query>
+    </table>
+    <table>
+        <id>4</id>
+        <Name>multistate</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>SELECT [name] as Name
+        ,[rtu] as "Remote"
+        ,[flag.bmsg] as "Base Message"
+        ,[dataset] as "Dataset"
+        ,[inIOSpecs[0]].iospec.external] as "Input Coords[0]"
+        ,[outIOSpecs[1]].iospec.external] as "Output Coordinates[1]"
+        ,[outIOSpecs[2]].iospec.external] as "Output Coordinates[2]"
+        ,[station] as Station
+        ,[hasInput] as "Has Input"
+        ,[hasOutput] as "Has Output"
+        ,[dataFormatType] as "Output Data Format"
+        ,[bitFormat.outbits[0]].coilType] as "Output Type[0]"
+        ,[bitFormat.outbits[0]].cmdState] as "Command[0]"
+        ,[bitFormat.outbits[1]].coilType] as "Output Type[1]"
+		    ,[bitFormat.outbits[1]].cmdState] as "Command[1]"
+		    ,[outBmsg] as "Command Base Message"
+        ,[stateMap] as "State Map"
+        ,[dmsalias] as "DMS Alias"
+        ,[dataFormatTypeInput] as "Input Data Format" from ADMS_QueryEngine.SCADA.multistate</Query>
+    </table>
+    <table>
+        <id>3</id>
+        <Name>rate</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select [name] as Name
+        , [rtu] as Remote
+        , [rate_period] as "Pulse In time between calcs (secs)"
+        , [accin.iospec.external] as "Pulse Input Coord."
+        , [accin.type] as "Pulse Input Type"
+        , [intype] as Source
+        , [dataset] as "Dataset"
+        , [sw] as "Enable Accum"
+        , [pointtype] as "Point Type"
+        , [rollover] as "Pulse In Rollover"
+        , [mf] as "Pulse In Meter Fctr"
+        , [anain.iospec.external] as "Input Coord."
+        , [anain.type] as "Input Type"
+        , [engr.rawmin] as "Min raw"
+        , [engr.rawmax] as "Max raw"
+        , [engr.egumin] as "Min (EGU)"
+        , [engr.egumax] as "Max (EGU)"
+        , [engr.allowengrunitsOverride] as "Allow EGU Override"
+        , [subtype] as Subtype
+        , [scale] as "Scale Factor"
+        , [intg.doit]
+        , [intg.period] as "Integrations Period"
+        , [dunits] as "Int EGU Units"
+        , [runits] as "Rate EGU Units"
+        , [description] as Description
+        , [dmsalias] as "DMS Alias"
+        , [flag.bmsg] as "Message"
+        , [allowalminhOverride] as "Allow Off-Norm Alm Override"
+        , [allowclrinhOverride] as "Allow Norm Alm Override"
+        , [station] as Station from ADMS_QueryEngine.SCADA.rate</Query>
+    </table>
+    <table>
+        <id>2</id>
+        <Name>analog</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>select [name] as "Name"
+               ,[rtu] as "Remote"
+               ,[flag.bmsg] as "Base Message"
+               ,[tolerance] as "Setpt Tolerance"
+               ,[pointtype] as "Point Type"
+               ,[dataset] as "Dataset"
+               ,[input] as "Has Input"
+               ,[output] as "Has Output"
+               ,[otype] as "Output Type"
+               ,[iengr.rawmin] as "Min (raw)"
+               ,[iengr.rawmax] as "Max (raw)"
+               ,[iengr.egumin] as "Min (EGU)"
+               ,[iengr.egumax] as "Max (EGU)"
+               ,[iengr.scaleraw] as "Convert"
+               ,[units] as "Engineering units"
+               ,[anain.iospec.external] as "Input Coordinates"
+               ,[anain.excdeadband] as "Exception Deadband"
+               ,[anain.type] as "Input Type"
+               ,[oengr.rawmax] as "Out Max (raw)"
+               ,[oengr.egumin] as "Out Min (EGU)"
+               ,[oengr.egumax] as "Out Max (EGU)"
+               ,[iengr.rawmin] as "Out Min (raw)"
+               ,[oengr.scaleraw] as "Out Conv raw to EGU"
+               ,[anaout.iospec.external] as "Output Coordinates"
+               ,[description] as "Description"
+               ,[repDeadband] as "Repl. Dband"
+               ,[dmsalias] as "DMS Alias"
+               ,[rve.ruleFailSeverity] as "Severity"
+               ,[allowLimitLevelOverride[0]]] as "Allow Level 1 Alarm Limit Override[0]"
+               ,[allowLimitLevelOverride[1]]] as "Allow Level 2 Alarm Limit Override[1]"
+               ,[allowLimitLevelOverride[2]]] as "Allow Level 3 Alarm Limit Override[2]"
+               ,[allowLimitLevelOverride[3]]] as "Allow Level 4 Alarm Limit Override[3]"
+               ,[allowCreepOverride] as "Allow Creep Override"
+               ,[allowalminhOverride] as "Allow Off-Norm Alm Override"
+               ,[allowclrinhOverride] as "Allow Norm Alm Override"
+               ,[aai.overridable] as "Allow Audible Alarm Inhibit Override"
+               ,[station] as "Station" from ADMS_QueryEngine.SCADA.analog</Query>
+    </table>
+    <table>
+        <id>1</id>
+        <Name>status</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>SELECT [name] as "Name"
+,[description] as "Description"
+,[pointtype] as "Input Type"
+,[rtu] as "Remote"
+,[flag.bmsg] as "Base Message"
+,[anyfeed] as "Has Input"
+,[anycmd] as "Has Output"
+,[inbit.bitwi] as "Num In Bits"
+,[inbit.bitdef[0]].iospec.external] as "Bit 1 Coord[0]"
+,[inbit.bitdef[1]].iospec.external] as "Bit 2 Coord[1]"
+,[outs[1]].iospec.external] as "Out On Coord[1]"
+,[outs[1]].otype] as "Out On Type[1]"
+,[outs[1]].cmd] as "Out On Cmd[1]"
+,[outs[1]].timeout] as "Operation time (msec)[1]"
+,[abnrm_state_alm[1]]] as "Abnml State+1[1]"
+,[outs[2]].iospec.external] as "Out Off Coord[2]"
+,[outs[2]].otype] as "Out Off Output Type[2]"
+,[outs[2]].cmd] as "Out Off Cmd[2]"
+,[outs[2]].timeout] as "Operation time (msec)[2]"
+,[abnrm_state_alm[2]]] as "Abnml State+2[2]"
+,[station] as "Station"
+,[soePoint] as "SOE Point"
+,[dataset] as "Dataset"
+,[dmsalias] as "DMS Alias"
+,[allowalminhOverride] as "Allow Off-Norm Alm Override"
+,[allowclrinhOverride] as "Allow Norm Alm Override"
+,[rve.ruleFailSeverity] as "Type"
+,[lgcmsc] as "Log Cmd Success"
+,[devtmr] as "Cmd Fail Timeout"
+,[dom.doit] as "Enable DOM"
+,[dom.genCntrs.skipManl] as "Skip DOM in Manual Override"
+,[dom.genCntrs.historyEnabled] as "Keep in History"
+,[sustainCOSalarmConfiguration] as "Sustain COS Alarms Configured"
+FROM [ADMS_QueryEngine].[SCADA].[status]</Query>
+    </table>
+      <table>
+        <id>39</id>
+        <Name>AsynchMachine</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT  [alias]
+      ,[container]
+      ,[catalog]
+      ,[customID]
+      ,[fuelType]
+      ,[faultContribution]
+      ,[gid]
+      ,[location]
+      ,[name]
+      ,[outputCurve]
+      ,[regulator1]
+      ,[regulator2]
+      ,[phases]
+       FROM [ADMS_QueryEngine].[DMS].[AsynchronousMachine]</Query>
+    </table>
+     <table>
+        <id>40</id>
+        <Name>AsynchMachineCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT ,[alias] 
+        ,[connectionType]}
+        ,[cosPhi]
+        ,[customID]
+        ,[efficiency]
+        ,[excitingCurrent]
+        ,[gid]
+        ,[name]
+        ,[phaseCount]
+        ,[ratedP]
+        ,[ratedSpeed]
+        ,[ratedVoltage]
+        ,[rotorType]
+        ,[rotorR]
+        ,[rotorX]
+       FROM [ADMS_QueryEngine].[DMS].[AsynchronousMachineCatalog]</Query>
+    </table>
+    <table>
+        <id>10</id>
+        <Name>Bay</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[parentContainer]
+      ,[location]
+  FROM [ADMS_QueryEngine].[DMS].[Bay]</Query>
+    </table>
+    <table>
+        <id>11</id>
+        <Name>Breaker</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[container]
+      ,[catalog]
+      ,[noReclosing]
+      ,[normalStatus]
+      ,[phases]
+  FROM [ADMS_QueryEngine].[DMS].[Breaker] where [customID] not like '13800%' </Query>
+    </table>
+     <table>
+        <id>12</id>
+        <Name>BreakerCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [alias]
+        ,[breakingCurrent]
+        ,[customID]
+        ,[gid]
+        ,[name]
+        ,[peakCurrent]
+        ,[phaseCount]
+        ,[ratedCurrent]
+        ,[ratedVoltage]
+        ,[openingTime]
+        ,[thermalCurrent]
+  FROM [ADMS_QueryEngine].[DMS].[BreakerCatalog] where [name] not like 'GIS%' </Query>
+    </table>
+    <table>
+        <id>13</id>
+        <Name>Busnode</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query> SELECT [connectivityNodeContainer]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid] FROM [ADMS_QueryEngine].[DMS].[BusNode]
+ </Query>
+    </table>
+      <table>
+        <id>14</id>
+        <Name>CableCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query> SELECT [alias]
+        ,[conductorMaterial]
+        ,[customID]
+        ,[gid]
+        ,[gmr]
+        ,[name]
+        ,[phaseCount]
+        ,[ratedCurrent]
+        ,[ratedVoltage]
+        ,[thermalConstantCool]
+        ,[thermalModel]
+        ,[x]
+        ,[x0]
+        ,[neutral]
+        ,[r0]
+        ,[r] FROM [ADMS_QueryEngine].[DMS].[CableCatalog] where [name] not like 'GIS%'</Query>
+    </table>
+    <table>
+        <id>15</id>
+        <Name>Capacitor</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query> SELECT [alias]
+        ,[catalog]
+        ,[container]
+        ,[customID]
+        ,[gid]
+        ,[name]
+        ,[phases@raw]   
+        ,[regulator1]
+        ,[regulator2] FROM [ADMS_QueryEngine].[DMS].[Capacitor] where [customID] not like '156%'</Query>
+    </table>
+    <table>
+        <id>16</id>
+        <Name>CapacitorBank</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [alias]
+        ,[customID]
+        ,[name]
+        ,[gid]
+        ,[parentContainer] FROM [ADMS_QueryEngine].[DMS].[CapacitorBank]</Query>
+    </table>
+    <table>
+        <id>17</id>
+        <Name>CapacitorCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [ratedValue]
+      ,[connection]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[instancesNo]
+      ,[customType]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[connection@raw]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[CapacitorCatalog]</Query>
+    </table>
+    <table>
+        <id>18</id>
+        <Name>ConnectivityNode</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [connectivityNodeContainer]
+      ,[customType]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[ConnectivityNode]</Query>
+    </table>
+    <table>
+        <id>19</id>
+        <Name>CurrentTransformer</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[customType]
+      ,[alias]
+      ,[gid]
+      ,[inputNode]
+      ,[outputNode]
+      ,[catalog]
+      ,[container]
+      ,[circuit]
+      ,[aorGroup]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[CurrentTransformer]</Query>
+    </table>
+    <table>
+        <id>20</id>
+        <Name>CurrentTransformerCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [primaryCurrent]
+      ,[secondaryCurrent]
+      ,[accuracyClass]
+      ,[meterKit]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[instancesNo]
+      ,[customType]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[coreCount]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[CurrentTransformerCatalog]</Query>
+    </table>
+    <table>
+        <id>21</id>
+        <Name>Disconnector</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [normalStatus]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[container]
+      ,[catalog]
+      ,[inputNode]
+      ,[outputNode]
+      ,[aorGroup]
+      ,[circuit2]
+      ,[circuit]
+      ,[customType]
+      ,[normalStatus@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[failureRate]
+      ,[access]
+      ,[access@raw]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[Disconnector]</Query>
+    </table>
+    <table>
+        <id>22</id>
+        <Name>DisconnectorCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [subType]
+      ,[ratedCurrent]
+      ,[breakingCurrent]
+      ,[reactiveBreakingCurrent]
+      ,[gangOperated]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[instancesNo]
+      ,[customType]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[subType@raw]
+      ,[lid]
+      ,[shortTermCurrent]
+  FROM [ADMS_QueryEngine].[DMS].[DisconnectorCatalog]</Query>
+    </table>
+    <table>
+        <id>23</id>
+        <Name>DistributedGenerator</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [ratedPower]
+      ,[ratedCosPhi]
+      ,[ratedVoltage]
+      ,[efficiency]
+      ,[unitCount]
+      ,[fuelType]
+      ,[faultContribution]
+      ,[contract]
+      ,[mainNode]
+      ,[auxNode]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[container]
+      ,[circuit]
+      ,[aorGroup]
+      ,[customID]
+      ,[name]
+      ,[alias]
+      ,[customType]
+      ,[gid]
+      ,[regulator1]
+      ,[regulator2]
+      ,[fuelType@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[grounded]
+      ,[lid]
+      ,[location]
+      ,[outputCurve]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[DistributedGenerator]</Query>
+    </table>
+    <table>
+        <id>24</id>
+        <Name>Fuse</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [normalStatus]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[catalog]
+      ,[inputNode]
+      ,[outputNode]
+      ,[container]
+      ,[aorGroup]
+      ,[circuit2]
+      ,[circuit]
+      ,[customType]
+      ,[normalStatus@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[failureRate]
+      ,[access]
+      ,[access@raw]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[Fuse]</Query>
+    </table>
+    <table>
+        <id>25</id>
+        <Name>FuseCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [fuseType]
+      ,[cutout]
+      ,[ratedCurrent]
+      ,[breakingCurrent]
+      ,[gangOperated]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[customID]
+      ,[customType]
+      ,[instancesNo]
+      ,[alias]
+      ,[gid]
+      ,[lowerCurveGID]
+      ,[upperCurveGID]
+      ,[fuseType@raw]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[FuseCatalog]</Query>
+    </table>
+    <table>
+        <id>26</id>
+        <Name>GroundImpedance</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [r]
+      ,[x]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[customID]
+      ,[customType]
+      ,[name]
+      ,[alias]
+      ,[gid]
+      ,[mainNode]
+      ,[auxNode]
+      ,[container]
+      ,[circuit]
+      ,[aorGroup]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[GroundImpedance]</Query>
+    </table>
+    <table>
+        <id>27</id>
+        <Name>GroundNode</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [connectivityNodeContainer]
+      ,[customType]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[GroundNode]</Query>
+    </table>
+    <table>
+        <id>28</id>
+        <Name>Jumper</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [normalStatus]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[container]
+      ,[catalog]
+      ,[inputNode]
+      ,[outputNode]
+      ,[aorGroup]
+      ,[circuit2]
+      ,[circuit]
+      ,[customType]
+      ,[normalStatus@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[failureRate]
+      ,[access]
+      ,[access@raw]
+      ,[lid]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[Jumper]</Query>
+    </table>
+    <table>
+        <id>29</id>
+        <Name>JumperCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [ratedCurrent]
+      ,[breakingCurrent]
+      ,[gangOperated]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[instancesNo]
+      ,[customType]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[JumperCatalog]</Query>
+    </table>
+    <table>
+        <id>30</id>
+        <Name>LoadBreaker</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [regulatingControl]
+      ,[normalStatus]
+      ,[catalog]
+      ,[inputNode]
+      ,[outputNode]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[container]
+      ,[circuit]
+      ,[aorGroup]
+      ,[circuit2]
+      ,[customID]
+      ,[name]
+      ,[alias]
+      ,[customType]
+      ,[gid]
+      ,[normalStatus@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[access]
+      ,[access@raw]
+      ,[failureRate]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[LoadBreaker]</Query>
+    </table>
+    <table>
+        <id>31</id>
+        <Name>LoadBreakSwitchCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [ratedCurrent]
+      ,[breakingCurrent]
+      ,[gangOperated]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[customID]
+      ,[customType]
+      ,[instancesNo]
+      ,[alias]
+      ,[gid]
+      ,[lid]
+      ,[shortTermCurrent]
+  FROM [ADMS_QueryEngine].[DMS].[LoadBreakSwitchCatalog]</Query>
+    </table>
+    <table>
+        <id>32</id>
+        <Name>Substation</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>
+        
+        
+        
+        </Query>
+    </table>
+    <table>
+        <id>33</id>
+        <Name>Transformer</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>
+        
+        
+        </Query>
+    </table>
+    <table>
+        <id>34</id>
+        <Name>TransformerCatalog2W</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>
+        
+        </Query>
+    </table>
+    <table>
+        <id>35</id>
+        <Name>TransformerCatalog3W</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>
+        
+        </Query>
+    </table>
+    <table>
+        <id>36</id>
+        <Name>SynchronousMachine</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [islandOperation]
+      ,[source]
+      ,[unitCount]
+      ,[fuelType]
+      ,[faultContribution]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[container]
+      ,[catalog]
+      ,[regulator1]
+      ,[regulator2]
+      ,[contract]
+      ,[aorGroup]
+      ,[circuit]
+      ,[customType]
+      ,[mainNode]
+      ,[auxNode]
+      ,[fuelType@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[grounded]
+      ,[lid]
+      ,[location]
+      ,[outputCurve]
+      ,[CodigoXM]
+      ,[TipoGeneracion]
+      ,[CodOfertaDiaria]
+      ,[Cogeneracion_Generacion]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[SynchronousMachine]</Query>
+    </table>
+    <table>
+        <id>37</id>
+        <Name>SynchronousMachineCatalog</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query> SELECT [minQ]
+      ,[timeConstantAperiodical]
+      ,[timeConstantTransient]
+      ,[timeConstantSubtransient]
+      ,[x]
+      ,[x0]
+      ,[x2]
+      ,[xDirectSubtrans]
+      ,[xDirectTrans]
+      ,[ratedS]
+      ,[maxQ]
+      ,[costPerUnit]
+      ,[phaseCount]
+      ,[ratedVoltage]
+      ,[name]
+      ,[instancesNo]
+      ,[customType]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[curve]
+      ,[connectionType]
+      ,[connectionType@raw]
+      ,[lid]
+  FROM [ADMS_QueryEngine].[DMS].[SynchronousMachineCatalog]
+        </Query>
+    </table>
+    <table>
+        <id>38</id>
+        <Name>TapChanger</Name>
+        <Schema>DMS_realtime</Schema>
+        <Query>SELECT [neutralStep]
+      ,[lowStep]
+      ,[highStep]
+      ,[winding]
+      ,[phases]
+      ,[importance]
+      ,[underground]
+      ,[utilityOwned]
+      ,[name]
+      ,[customID]
+      ,[alias]
+      ,[gid]
+      ,[mainNode]
+      ,[auxNode]
+      ,[element]
+      ,[regulator1]
+      ,[regulator2]
+      ,[container]
+      ,[circuit]
+      ,[aorGroup]
+      ,[customType]
+      ,[winding@raw]
+      ,[phases@raw]
+      ,[importance@raw]
+      ,[reverseLogic]
+      ,[lid]
+      ,[location]
+      ,[Criticidad]
+      ,[STN/STR]
+  FROM [ADMS_QueryEngine].[DMS].[TapChanger]</Query>
+    </table>
+</tables>
