@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <tables>
     <table>
+        <id>10</id>
+        <Name>iccpdatavalue</Name>
+        <Schema>Scada_realtime</Schema>
+        <Query>Select name as "Name"
+        ,description as "Description"
+        ,pointrole as "Point Role" 
+        ,localPointDbnPnt as "Local Point Name" from ADMS_QueryEngine.SCADA.iccpdatavalue</Query>
+    </table>
+    <table>
         <id>9</id>
         <Name>remconnjoin</Name>
         <Schema>Scada_realtime</Schema>
@@ -129,7 +138,7 @@
                 ,adrs as Address
                 ,[dataset] as "Dataset"
                 ,[flag.bmsg] as "Message"
-                ,[allowalminhOverride] as "Allow off-Norm Alm Override"
+                ,[allowalminhOverride] as "Allow Off-Norm Alm Override"
                 ,[allowclrinhOverride] as "Allow Norm Alm Override"
                 ,proto as Protocol from ADMS_QueryEngine.SCADA.remote</Query>
     </table>
@@ -325,7 +334,7 @@ FROM [ADMS_QueryEngine].[SCADA].[status]</Query>
        FROM [ADMS_QueryEngine].[DMS].[AsynchronousMachineCatalog]</Query>
     </table>
     <table>
-        <id>10</id>
+        <id>41</id>
         <Name>Bay</Name>
         <Schema>DMS_realtime</Schema>
         <Query>SELECT [name]
