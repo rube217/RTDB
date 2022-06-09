@@ -201,13 +201,13 @@
         , [engr.allowengrunitsOverride] as "Allow EGU Override"
         , [subtype] as Subtype
         , [scale] as "Scale Factor"
-        , [intg.doit]
+        , [intg.doit] as "Enable Int."
         , [intg.period] as "Integrations Period"
         , [dunits] as "Int EGU Units"
         , [runits] as "Rate EGU Units"
         , [description] as Description
         , [dmsalias] as "DMS Alias"
-        , [flag.bmsg] as "Message"
+        , [flag.bmsg] as "Base Message"
         , [allowalminhOverride] as "Allow Off-Norm Alm Override"
         , [allowclrinhOverride] as "Allow Norm Alm Override"
         , [station] as Station from ADMS_QueryEngine.SCADA.rate</Query>
