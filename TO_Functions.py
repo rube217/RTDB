@@ -111,15 +111,11 @@ def main():
     conn_dev = pyodbc.connect('Driver={SQL Server}; Server=10.241.114.12,20010\\OASYSHDB;Database=ADMS_QueryEngine;UID=Epsareportes; PWD=cmXoasys2;')
 
     message = """"
-    Por favor ingresa el numero de la Tabla deseas comparar entre Dev y Production:
+    Que deseas hacer:
 
-    1. status
-    2. analog
-    3. rate
-    4. multistate
-    5. connection
-    6. remote
-    7. station
+    1. Errores Import/Export 
+    2. Alinear RTDB
+    3. Comparar DMS_RT Dev-PROD
     """
 
     GetDifferencesRTDB(conn_prod,conn_dev,input(message))
