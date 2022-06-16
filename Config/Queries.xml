@@ -121,7 +121,10 @@
         ,[DQmapping[28]].InputDQname] as "Input Data Quality Name[28]"
         ,[DQmapping[28]].OutputDQname] as "Output Data Quality Name[28]"
         ,[DQmapping[29]].InputDQname] as "Input Data Quality Name[29]"
-        ,[DQmapping[29]].OutputDQname] as "Output Data Quality Name[29]" from ADMS_QueryEngine.SCADA.aceconfig</Query>
+        ,[DQmapping[29]].OutputDQname] as "Output Data Quality Name[29]"
+        ,inputTriggered as "Changes to Inputs"
+        ,startupTriggered as "Startup Triggered"
+        ,codeTriggered as "Code Change Triggered" from ADMS_QueryEngine.SCADA.aceconfig</Query>
     </table>
     <table>
         <id>7</id>
