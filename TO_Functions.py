@@ -74,6 +74,8 @@ def GetChangeset_Errors():
     try:
         file_root = askopenfilename()
         df = pd.read_csv(file_root,sep=';',error_bad_lines= False,skiprows=1)
+        df.Circuit = df.Circuit.str.replace('( [[A-Z]\w+])','')
+
         source = 'ChangeSet'
         return df,source
     except ValueError:
@@ -99,22 +101,28 @@ def GetSummaryReport():
         print("ERROR",ValueError)
 
 def GetSourceFile(FeederList):
-    for FeederCID in FeederList:
-        FileChoosen = ['',0]
-        for root,dir,files in os.walk('//10.241.115.13/Extract'):
-            for file in files:
-                if FeederCID in file:
-                    FileChoosen[1] = max(FileChoosen[1], os.path.getctime(root+'/'+file))
-                    FileChoosen[0] = root+'/'+file
+    #for FeederCID in FeederList:
+    if ' ' in FeederList:
+        FeederList = FeederList.split(' ')[0]
+    FileChoosen = ['',0]
+    for root,dir,files in os.walk('//10.241.115.13/Extract'):
+        for file in files:
+            if FeederList in file:
+                FileChoosen[1] = max(FileChoosen[1], os.path.getctime(root+'/'+file))
+                FileChoosen[0] = root+'/'+file
 
     return(FileChoosen[0])
     
 def GetElementID(path = '',Error_Mess = ''):
     try:
         root = ET.parse(path)
-        for connection in root.findall("{http://iec.ch/TC57/2010/CIM-schema-cim15#}Terminal"):
-            if Error_Mess[Error_Mess.find('Id:')+3:].strip() in str(connection.find('{http://iec.ch/TC57/2010/CIM-schema-cim15#}Terminal.ConnectivityNode').attrib):
-                print(re.search('\d{15}',str(connection.attrib)).group())
+        connectivity_node = re.search('(-[\d]\w+.[\d]\w+.[\d]:CN)',Error_Mess)
+
+        if connectivity_node != None:
+            print(connectivity_node.group())
+            for connection in root.findall("{http://iec.ch/TC57/2010/CIM-schema-cim15#}Terminal"):
+                if connectivity_node.group() in str(connection.find('{http://iec.ch/TC57/2010/CIM-schema-cim15#}Terminal.ConnectivityNode').attrib):
+                    return('Revisar elemento:\t' + re.search('\d{15}',str(connection.attrib)).group() + '\tpara solucionar Error:\t' + Error_Mess)
     except ValueError:
         print(ValueError)
 
@@ -139,22 +147,38 @@ def main():
         if option_import_export == '1':
             print("Por favor ingresar archivo .csv, resultado de Summary Report")
             df,source = GetChangeset_Errors()
-            with open('ProcessedErrors_{}.csv'.format(datetime.datetime.now()),'w+') as file:
+                
+            with open('ProcessedErrors_{}.csv'.format(datetime.datetime.now().strftime('%Y%m%d_%H%M')),'w+') as file:
+                previous_circuit = ''
                 for i,x in df.iterrows():
-                    y = GetElementID(GetSourceFile(str(x.Circuit)),x.FileContent,source)       
+                    
+                    if x.Circuit != previous_circuit:
+                        source_file = GetSourceFile(str(x.Circuit).strip())
+                        previous_circuit = x.Circuit
+                    
+                    y = GetElementID(source_file,x.FileContent)       
                     if y != None:
                         file.write(str(y)+'\n')       
             file.close()
+            print('Se ha finalizado la ejecución, el archivo se encuentra en {}'.format(os.getcwd()))
 
         elif option_import_export == '2':
             print("Por favor ingresar carpeta que contenga las carpetas resultado de Summary Report")
             df,source = GetSummaryReport()
-            with open('ProcessedErrors_{}.csv'.format(datetime.datetime.now()),'w+') as file:
+            with open('ProcessedErrors_{}.csv'.format(datetime.datetime.now().strftime('%Y%m%d_%H%M')),'w+') as file:
+                previous_circuit = ''
                 for i,x in df.iterrows():
-                    y = GetElementID(GetSourceFile(str(x.Feeder)),x.Error,source)       
+
+                    if x.Feeder != previous_circuit:
+                        source_file = GetSourceFile(str(x.Feeder))
+                        previous_circuit = x.Feeder
+
+                    y = GetElementID(source_file,x.Error)       
                     if y != None:
-                        file.write(str(y)+'\n')       
+                        file.write(str(y)+'\n')
+                           
             file.close()
+            print('Se ha finalizado la ejecución, el archivo se encuentra en {}'.format(os.getcwd()))
 
     elif option == '2':
         menu_rtdb = GetConfiguration()
